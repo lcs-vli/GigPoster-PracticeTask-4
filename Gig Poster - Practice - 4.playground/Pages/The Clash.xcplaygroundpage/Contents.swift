@@ -31,11 +31,26 @@ let blue = Color(hue: 201, saturation: 72, brightness: 85, alpha: 65)
 let offWhite = Color(hue: 208, saturation: 1, brightness: 88, alpha: 100)
 let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
 
+//print the reference lines
+for shuline in 1...7{
+    canvas.drawLine(from: Point(x: shuline * 50,y: 0), to: Point(x: shuline * 50,y: 600))
+}
+
+for hengline in 1...11{
+    canvas.drawLine(from: Point(x: 0,y: hengline * 50), to: Point(x: 400,y: hengline * 50))
+}
+
 //move the origin
-canvas.translate(to: Point(x:170, y:380))
-canvas.rotate(by: 90)
+canvas.translate(to: Point(x:168, y:175))
+canvas.rotate(by: 45)
+//canvas.drawAxes()
 
-
+//draw the blue rectangles with lines
+canvas.drawShapesWithFill = false
+canvas.borderColor = blue
+for rectangle in 0...6{
+    canvas.drawRectangle(at: Point(x:0+rectangle*25, y:0+rectangle*25), width: 295-50*rectangle, height: 295-50*rectangle, borderWidth: 12)
+}
 
 
 /*:
