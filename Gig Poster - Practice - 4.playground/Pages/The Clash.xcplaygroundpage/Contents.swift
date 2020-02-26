@@ -31,7 +31,11 @@ let blue = Color(hue: 201, saturation: 72, brightness: 85, alpha: 65)
 let offWhite = Color(hue: 208, saturation: 1, brightness: 88, alpha: 100)
 let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
 
-// Begin your work below...
+//move the origin
+canvas.translate(to: Point(x:170, y:380))
+canvas.rotate(by: 90)
+
+
 
 
 /*:
