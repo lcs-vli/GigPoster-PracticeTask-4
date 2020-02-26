@@ -40,6 +40,10 @@ let black = Color(hue: 0, saturation: 100, brightness: 0, alpha: 100)
 //    canvas.drawLine(from: Point(x: 0,y: hengline * 50), to: Point(x: 400,y: hengline * 50))
 //}
 
+//draw the background
+canvas.fillColor = orange
+canvas.drawRectangle(at: Point(x:0, y:0), width: 400, height: 600)
+
 //move the origin
 canvas.translate(to: Point(x:228, y:175))
 canvas.rotate(by: 45)
@@ -49,19 +53,21 @@ canvas.rotate(by: 45)
 canvas.drawShapesWithFill = false
 canvas.borderColor = offWhite
 for rectangle in 0...6{
-    canvas.drawRectangle(at: Point(x:0+rectangle*25, y:0+rectangle*25), width: 295-50*rectangle, height: 295-50*rectangle, borderWidth: 12)
+    canvas.drawRectangle(at: Point(x:0+rectangle*25, y:0+rectangle*25), width: 298-50*rectangle, height: 298-50*rectangle, borderWidth: 12)
 }
 
 //move the origin
 canvas.rotate(by: -45)
-canvas.translate(to: Point(x:-50, y:0))
+canvas.translate(to: Point(x:-60, y:0))
 canvas.rotate(by: 45)
 
 //draw the offwhite rectangles with lines
 canvas.borderColor = blue
 for rectangle in 0...6{
-    canvas.drawRectangle(at: Point(x:0+rectangle*25, y:0+rectangle*25), width: 295-50*rectangle, height: 295-50*rectangle, borderWidth: 12)
+    canvas.drawRectangle(at: Point(x:0+rectangle*25, y:0+rectangle*25), width: 298-50*rectangle, height: 298-50*rectangle, borderWidth: 12)
 }
+
+
 /*:
  ## Use Source Control
  
